@@ -1,0 +1,60 @@
+{
+  "common": {
+    "language": "portugues"
+  },
+  "about": {
+    "intro": "Eu sou",
+    "name": "Seu Nome",
+    "description": "um Desenvolvedor Full Stack criando aplicacoes web modernas, produtos uteis e experiencias digitais bem cuidadas."
+  },
+  "navigation": {
+    "all": "todos",
+    "about": "sobre",
+    "projects": "projetos",
+    "home": "inicio",
+    "repository_selected": "repositorios selecionados"
+  },
+  "experience": [
+    {
+      "desc": "Adicione aqui sua experiencia mais recente. Fale sobre o produto, suas responsabilidades, as tecnologias usadas e o impacto do seu trabalho.",
+      "time": "2025 - Presente"
+    },
+    {
+      "desc": "Use este item para descrever uma experiencia anterior, freela, estagio ou projeto de estudo que mostre sua evolucao como desenvolvedor.",
+      "time": "2024 - 2025"
+    },
+    {
+      "desc": "Descreva outro projeto ou marco de aprendizado. Mantenha o texto objetivo e focado no que voce construiu.",
+      "time": "2023 - 2024"
+    },
+    {
+      "desc": "Adicione uma conquista tecnica, certificacao, bootcamp ou projeto pessoal que ajudou a formar sua stack atual.",
+      "time": "2022 - 2023"
+    },
+    {
+      "desc": "Use este espaco para seu inicio na programacao, primeiros projetos ou o momento em que comecou a construir para a web.",
+      "time": "2021 - 2022"
+    },
+    {
+      "desc": "Item opcional. Voce pode remover esta entrada ou trocar por outra experiencia em src/lib/data.ts e neste arquivo de traducao.",
+      "time": "2020 - 2021"
+    }
+  ],
+  "projects": [
+    {
+      "description": "Interface responsiva criada para apresentar um produto digital com foco em performance, clareza visual e boa experiencia de navegacao."
+    },
+    {
+      "description": "Painel administrativo com cards, filtros e indicadores para organizar dados de negocio de maneira visual e facil de consultar."
+    },
+    {
+      "description": "Aplicacao web com fluxo de autenticacao, organizacao de registros e componentes reutilizaveis para acelerar novas telas."
+    },
+    {
+      "description": "Projeto criado para praticar consumo de API, estados no React, componentizacao e organizacao de paginas em Next.js."
+    }
+  ],
+  "footer": {
+    "versionOne": "Portfolio pessoal"
+  }
+}

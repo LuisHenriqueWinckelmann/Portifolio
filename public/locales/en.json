@@ -1,0 +1,60 @@
+{
+  "common": {
+    "language": "english"
+  },
+  "about": {
+    "intro": "I'm",
+    "name": "Your Name",
+    "description": "a Full Stack Developer building modern web applications, useful products and clean digital experiences."
+  },
+  "navigation": {
+    "all": "all",
+    "about": "about",
+    "projects": "projects",
+    "home": "home",
+    "repository_selected": "selected repositories"
+  },
+  "experience": [
+    {
+      "desc": "Add your most recent experience here. Mention the product, your responsibilities, the technologies used and the impact of your work.",
+      "time": "2025 - Present"
+    },
+    {
+      "desc": "Use this item to describe a previous role, freelance project, internship or study project that shows your growth as a developer.",
+      "time": "2024 - 2025"
+    },
+    {
+      "desc": "Describe another project or learning milestone. Keep the text objective and focused on what you built.",
+      "time": "2023 - 2024"
+    },
+    {
+      "desc": "Add a technical achievement, certification, bootcamp or personal project that helped shape your current stack.",
+      "time": "2022 - 2023"
+    },
+    {
+      "desc": "Use this space for your beginning in programming, first projects or the moment you started building for the web.",
+      "time": "2021 - 2022"
+    },
+    {
+      "desc": "Optional extra item. You can remove this entry or replace it with another experience in src/lib/data.ts and this translation file.",
+      "time": "2020 - 2021"
+    }
+  ],
+  "projects": [
+    {
+      "description": "Responsive interface designed to present a digital product with performance, visual clarity and a smooth browsing experience."
+    },
+    {
+      "description": "Admin dashboard with cards, filters and indicators to organize business data in a visual and easy-to-read way."
+    },
+    {
+      "description": "Web application with authentication flow, record management and reusable components for faster page creation."
+    },
+    {
+      "description": "Study project built to practice API consumption, React state, componentization and page organization in Next.js."
+    }
+  ],
+  "footer": {
+    "versionOne": "Personal portfolio"
+  }
+}
