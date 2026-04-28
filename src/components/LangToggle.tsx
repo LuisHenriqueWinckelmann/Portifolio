@@ -15,14 +15,16 @@ const LangToggle = () => {
     setIsMounted(true);
   }, []);
 
-  const toggleLocale = () => {
-    router.push(locale === 'pt' ? '/en' : '/pt');
+  const changeLocale = (nextLocale: string) => {
+    if (nextLocale !== locale) {
+      router.push(`/${nextLocale}`);
+    }
   };
 
   if (locale === 'undefined') return null;
 
   return isMounted ? (
-    <SliderToggle selected={locale} setSelected={toggleLocale} />
+    <SliderToggle selected={locale} setSelected={changeLocale} />
   ) : null;
 };
 
@@ -31,7 +33,7 @@ const SliderToggle = ({
   setSelected,
 }: {
   selected: string | undefined;
-  setSelected: () => void;
+  setSelected: (locale: string) => void;
 }) => {
   return (
     <div className="relative flex w-fit items-center rounded-full">
@@ -39,7 +41,7 @@ const SliderToggle = ({
         className={`${TOGGLE_CLASSES} ${
           selected === 'en' ? 'text-white' : 'text-slate-300'
         }`}
-        onClick={setSelected}
+        onClick={() => setSelected('en')}
       >
         <span className="relative z-10 text-lg">EN</span>
         <span className="relative z-10">EN</span>
@@ -48,7 +50,7 @@ const SliderToggle = ({
         className={`${TOGGLE_CLASSES} ${
           selected === 'pt' ? 'text-white' : 'text-slate-800'
         }`}
-        onClick={setSelected}
+        onClick={() => setSelected('pt')}
       >
         <span className="relative z-10 text-lg">BR</span>
         <span className="relative z-10">PT</span>
