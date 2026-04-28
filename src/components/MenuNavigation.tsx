@@ -20,7 +20,7 @@ const MenuNavigation = ({ selected, options, handleChange }: Props) => {
       <div className="relative">
         <h2
           className={cn(
-            'text-bold mb-2 animate-gradient bg-[linear-gradient(to_right,theme(colors.pallet-blue.1),theme(colors.pallet-blue.2),theme(colors.sky.400),theme(colors.pallet-purple.1),theme(colors.pallet-pink.1),theme(colors.sky.400),theme(colors.pallet-blue.2),theme(colors.pallet-blue.1))] bg-[length:200%_auto] bg-clip-text text-2xl text-transparent sm:mb-0',
+            'text-bold mb-2 animate-gradient bg-[linear-gradient(to_right,theme(colors.red.300),theme(colors.pallet-blue.1),theme(colors.pallet-blue.2),theme(colors.pallet-pink.2),theme(colors.red.200),theme(colors.pallet-blue.2),theme(colors.pallet-blue.1),theme(colors.red.300))] bg-[length:200%_auto] bg-clip-text text-2xl text-transparent sm:mb-0',
             mochiy_pop_one.className,
           )}
         >
@@ -70,7 +70,7 @@ const Chip = ({
         <motion.span
           layoutId="pill-tab"
           transition={{ type: 'spring', duration: 0.5 }}
-          className="absolute inset-0 z-0 rounded-md bg-gradient-to-r from-white to-slate-50 shadow-md dark:from-slate-500 dark:to-slate-300 dark:shadow-gray-700"
+          className="absolute inset-0 z-0 rounded-md bg-gradient-to-r from-red-100 to-white shadow-md shadow-red-950/20 dark:from-red-500 dark:to-red-200 dark:shadow-red-950/60"
         />
       ) : null}
     </button>

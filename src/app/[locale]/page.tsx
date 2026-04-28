@@ -47,7 +47,7 @@ const Page = () => {
       },
       {
         header: <Experience />,
-        className: 'md:col-span-3 md:row-span-4 p-4',
+        className: 'md:col-span-2 p-3',
         active: true,
         category: 'about',
       },
@@ -58,7 +58,7 @@ const Page = () => {
         className: 'md:col-span-1 p-4',
         icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
         active: true,
-        category: 'projects' as const,
+        category: 'about' as const,
       })),
     ],
     [t],
@@ -93,7 +93,7 @@ const Page = () => {
         <BentoGrid
           list={items}
           setList={setItems}
-          className="mx-auto max-w-4xl md:auto-rows-[20rem]"
+          className="mx-auto max-w-4xl md:auto-rows-[18rem]"
         >
           {items.map((item, index) => (
             <BentoGridItem

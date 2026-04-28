@@ -61,7 +61,7 @@ const SliderToggle = ({
         <motion.span
           layout
           transition={{ type: 'spring', damping: 15, stiffness: 250 }}
-          className="h-full w-1/2 animate-gradient rounded-full bg-[linear-gradient(to_right,theme(colors.pallet-pink.1),theme(colors.pallet-pink.2),theme(colors.pallet-purple.1),theme(colors.pallet-purple.2),theme(colors.pallet-pink.1),theme(colors.pallet-pink.2),theme(colors.pallet-purple.1),theme(colors.pallet-pink.1))] bg-[length:200%_auto] shadow-md"
+          className="h-full w-1/2 animate-gradient rounded-full bg-[linear-gradient(to_right,theme(colors.red.300),theme(colors.pallet-pink.2),theme(colors.pallet-blue.2),theme(colors.pallet-purple.1),theme(colors.red.200),theme(colors.pallet-pink.2),theme(colors.pallet-blue.2))] bg-[length:200%_auto] shadow-md shadow-red-950/30"
         />
       </div>
     </div>

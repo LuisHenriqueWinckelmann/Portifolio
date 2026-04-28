@@ -5,18 +5,17 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import Animation from '../../public/animations/animation-cat.json';
 import { motion } from 'framer-motion';
 import {
-  DiJqueryLogo,
   DiJsBadge,
   DiReact,
-  DiCss3,
   DiSass,
   DiGit,
   DiGo,
   DiSwift,
-  DiLaravel,
+  DiJava,
 } from 'react-icons/di';
 import { cn } from '@/lib/utils';
 import { BiLogoTypescript } from 'react-icons/bi';
+import { SiApachemaven, SiSpringboot } from 'react-icons/si';
 
 const techStackData = [
   {
@@ -35,15 +34,15 @@ const techStackData = [
   },
   {
     id: 3,
-    title: 'jQuery',
-    icons: <DiJqueryLogo className="group-hover:opacity-0" />,
+    title: 'Maven',
+    icons: <SiApachemaven className="group-hover:opacity-0" />,
     color: 'text-white',
     background: 'bg-pallet-pink-1',
   },
   {
     id: 4,
-    title: 'CSS 3',
-    icons: <DiCss3 className="group-hover:opacity-0" />,
+    title: 'Spring Boot',
+    icons: <SiSpringboot className="group-hover:opacity-0" />,
     color: 'text-white',
     background: 'bg-pallet-purple-3',
   },
@@ -70,8 +69,8 @@ const techStackData = [
   },
   {
     id: 8,
-    title: 'Laravel',
-    icons: <DiLaravel className="group-hover:opacity-0" />,
+    title: 'Java',
+    icons: <DiJava className="group-hover:opacity-0" />,
     color: 'text-white',
     background: 'bg-pallet-blue-1',
   },
