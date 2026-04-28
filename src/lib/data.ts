@@ -7,7 +7,7 @@ export const profile = {
   headline:
     'Desenvolvedor Full Stack Java focado em criar interfaces modernas, sistemas uteis e facilidades para o seu negocio.',
   email: 'luisseverodasilva17@gmail.com',
-  resumeUrl: 'https://drive.google.com/file/d/1qK5bGBoVLSmjOEOEaoLktqR_UddZUXF0/view',
+  resumeUrl: 'https://drive.google.com/file/d/1qK5bGBoVLSmjOEOEaoLktqR_UddZUXF0/view?usp=sharing',
   websiteUrl: '#',
   githubUsername: 'LuisHenriqueWinckelmann',
   social: {
