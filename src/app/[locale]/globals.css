@@ -5,7 +5,7 @@
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --background-2: 312, 45%, 98%;
+    --background-2: 0, 58%, 97%;
     --foreground: 222.2 84% 4.9%;
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -35,15 +35,15 @@
     --pallet-purple-3: 263, 87%, 35%;
     --pallet-pink-1: 309, 77%, 40%;
     --pallet-pink-2: 333, 93%, 56%;
-    --background-dark: 222.2 84% 4.9%;
-    --background-dark-2: 210, 28%, 7%;
+    --background-dark: 355, 74%, 6%;
+    --background-dark-2: 350, 88%, 10%;
   }
 
   .dark {
-    --background: 210, 28%, 7%;
-    --background-2: 222.2 84% 4.9%;
+    --background: 355, 74%, 6%;
+    --background-2: 350, 88%, 10%;
     --foreground: 210 40% 98%;
-    --card: 222.2 84% 4.9%;
+    --card: 355, 62%, 8%;
     --card-foreground: 210 40% 98%;
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
