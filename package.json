@@ -46,7 +46,7 @@
     "typescript": "^5"
   },
   "engines": {
-    "node": ">=16.8.x"
+    "node": "20.x"
   },
   "resolutions": {
     "jackspeak": "2.1.1"
