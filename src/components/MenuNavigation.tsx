@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import { cn } from '@/lib/utils';
 import { mochiy_pop_one } from '@/lib/fonts';
-import { profile } from '@/lib/data';
 
 interface Props {
   selected?: string;
@@ -14,6 +13,7 @@ interface Props {
 
 const MenuNavigation = ({ selected, options, handleChange }: Props) => {
   const t = useTranslations('navigation');
+  const profileT = useTranslations('profile');
 
   return (
     <MaxWidthWrapper className="flex flex-col items-center py-6 sm:flex-row">
@@ -24,7 +24,7 @@ const MenuNavigation = ({ selected, options, handleChange }: Props) => {
             mochiy_pop_one.className,
           )}
         >
-          {profile.shortName}
+          {profileT('shortName')}
         </h2>
       </div>
       {options && handleChange ? (

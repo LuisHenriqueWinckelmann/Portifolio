@@ -7,6 +7,7 @@ import axios from 'axios';
 import { motion } from 'framer-motion';
 import { HoverEffect } from '@/components/ui/card-hover-effect';
 import { profile, selectedReposList } from '@/lib/data';
+import { useTranslations } from 'next-intl';
 
 interface IRepoGithub {
   id: number;
@@ -18,13 +19,14 @@ interface IRepoGithub {
 }
 
 const Page = () => {
+  const t = useTranslations('repositories');
   const [isFetch, setIsFetch] = useState<boolean>(false);
   const [repos, setRepos] = useState<IRepoGithub[]>([]);
   const [selectedRepos, setSelectedRepos] = useState<IRepoGithub[]>([]);
 
   useEffect(() => {
     const fetchRepos = async () => {
-      if (profile.githubUsername === 'seu-usuario-github') {
+      if (!profile.githubUsername) {
         setRepos([]);
         return;
       }
@@ -69,7 +71,7 @@ const Page = () => {
             animate={{ x: 0, scale: 1, opacity: 1 }}
             className="mb-4 text-2xl"
           >
-            Repositorios
+            {t('title')}
           </motion.h1>
           <HoverEffect isFetch={isFetch} items={selectedRepos} />
         </div>

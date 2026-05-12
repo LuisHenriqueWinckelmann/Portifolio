@@ -2,7 +2,7 @@
 
 import { IBentoGridItem } from '@/lib/types';
 import { cn } from '@/lib/utils';
-import { motion, stagger, useAnimate } from 'framer-motion';
+import { motion } from 'framer-motion';
 
 const BentoGridItem = ({
   className,
@@ -10,23 +10,12 @@ const BentoGridItem = ({
   description,
   header,
   icon,
+  url,
   index,
   active,
 }: IBentoGridItem) => {
-  return (
-    <motion.div
-      transition={{ delay: index * 0.2 }}
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={
-        active
-          ? { opacity: 1, y: 0, scale: 1 }
-          : { opacity: 0.3, y: 0, scale: 1 }
-      }
-      className={cn(
-        'group-draggable group/bento row-span-1 flex cursor-grab flex-col justify-between space-y-4 overflow-hidden rounded-[32px] border border-transparent bg-white shadow-input drop-shadow-sm transition-all duration-200 ease-in-out hover:shadow-xl dark:border-white/[0.5] dark:bg-card dark:shadow-none',
-        className,
-      )}
-    >
+  const content = (
+    <>
       {header}
       {icon || title || description ? (
         <div className="transition duration-200 group-hover/bento:translate-x-2">
@@ -43,6 +32,35 @@ const BentoGridItem = ({
           )}
         </div>
       ) : null}
+    </>
+  );
+
+  return (
+    <motion.div
+      transition={{ delay: index * 0.2 }}
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={
+        active
+          ? { opacity: 1, y: 0, scale: 1 }
+          : { opacity: 0.3, y: 0, scale: 1 }
+      }
+      className={cn(
+        'group-draggable group/bento row-span-1 flex cursor-grab flex-col justify-between space-y-4 overflow-hidden rounded-[32px] border border-transparent bg-white shadow-input drop-shadow-sm transition-all duration-200 ease-in-out hover:shadow-xl dark:border-white/[0.5] dark:bg-card dark:shadow-none',
+        className,
+      )}
+    >
+      {url && url !== '#' ? (
+        <a
+          href={url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex h-full flex-col justify-between"
+        >
+          {content}
+        </a>
+      ) : (
+        content
+      )}
     </motion.div>
   );
 };

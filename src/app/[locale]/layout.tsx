@@ -8,50 +8,56 @@ import Footer from '@/components/Footer';
 import Inner from '@/components/layouts/inner';
 import { poppins } from '@/lib/fonts';
 import { profile } from '@/lib/data';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: `${profile.name} - ${profile.role}`,
-  description: profile.headline,
-  keywords: [
-    'portfolio',
-    'portfolio website',
-    'developer',
-    'frontend',
-    'fullstack',
-    'web developer',
-    'web development',
-    'react',
-    'nextjs',
-  ],
-  icons: {
-    icon: [
-      {
-        media: '(prefers-color-scheme: light)',
-        url: '/memoji-2.png',
-        href: '/memoji-2.png',
-      },
-      {
-        media: '(prefers-color-scheme: dark)',
-        url: '/memoji-1.png',
-        href: '/memoji-1.png',
-      },
-    ],
-  },
-  openGraph: {
-    title: `${profile.name} - ${profile.role}`,
-    type: 'website',
-    images:
-      'https://ucarecdn.com/b624aa7d-978f-44ef-8e45-bf3c12f1e846/memojilaptop1.png',
-    url: profile.websiteUrl,
-    description: profile.headline,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: `${profile.name} - ${profile.role}`,
-    description: profile.headline,
-    images:
-      'https://ucarecdn.com/b624aa7d-978f-44ef-8e45-bf3c12f1e846/memojilaptop1.png',
-  },
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> => {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: 'metadata',
+  });
+  const metadataBase = new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000',
+  );
+
+  return {
+    metadataBase,
+    title: t('title'),
+    description: t('description'),
+    keywords: t.raw('keywords'),
+    icons: {
+      icon: [
+        {
+          media: '(prefers-color-scheme: light)',
+          url: '/memoji-2.png',
+          href: '/memoji-2.png',
+        },
+        {
+          media: '(prefers-color-scheme: dark)',
+          url: '/memoji-1.png',
+          href: '/memoji-1.png',
+        },
+      ],
+    },
+    openGraph: {
+      title: t('title'),
+      type: 'website',
+      images:
+        'https://ucarecdn.com/b624aa7d-978f-44ef-8e45-bf3c12f1e846/memojilaptop1.png',
+      url: profile.websiteUrl,
+      description: t('description'),
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: t('title'),
+      description: t('description'),
+      images:
+        'https://ucarecdn.com/b624aa7d-978f-44ef-8e45-bf3c12f1e846/memojilaptop1.png',
+    },
+  };
 };
 
 export default function RootLayout({

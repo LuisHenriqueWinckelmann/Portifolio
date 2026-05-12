@@ -1,6 +1,28 @@
 {
   "common": {
-    "language": "portugues"
+    "language": "portugues",
+    "loading": "Carregando..."
+  },
+  "profile": {
+    "name": "Luis Henrique Winckelmann",
+    "shortName": "Luis Winckelmann",
+    "role": "Desenvolvedor Full Stack Java",
+    "headline": "Desenvolvedor Full Stack Java focado em criar interfaces modernas, sistemas uteis e facilidades para o seu negocio."
+  },
+  "metadata": {
+    "title": "Luis Henrique Winckelmann - Desenvolvedor Full Stack Java",
+    "description": "Desenvolvedor Full Stack Java focado em criar interfaces modernas, sistemas uteis e facilidades para o seu negocio.",
+    "keywords": [
+      "portfolio",
+      "site de portfolio",
+      "desenvolvedor",
+      "frontend",
+      "fullstack",
+      "desenvolvedor web",
+      "desenvolvimento web",
+      "react",
+      "nextjs"
+    ]
   },
   "about": {
     "intro": "Eu sou",
@@ -16,45 +38,82 @@
   },
   "experience": [
     {
-      "desc": "Adicione aqui sua experiencia mais recente. Fale sobre o produto, suas responsabilidades, as tecnologias usadas e o impacto do seu trabalho.",
-      "time": "2025 - Presente"
+      "title": "Duett Software",
+      "subtitle": "Desenvolvedor Full-Stack Java Junior",
+      "workSchema": "Tempo integral",
+      "desc": "Trabalho com desenvolvimento full-stack em Java nos principais projetos da empresa. Atuo com Java JDK 21, Spring Boot, React e TypeScript.",
+      "time": "ago de 2025 - presente"
     },
     {
-      "desc": "Use este item para descrever uma experiencia anterior, freela, estagio ou projeto de estudo que mostre sua evolucao como desenvolvedor.",
-      "time": "2024 - 2025"
+      "title": "Cmak AgroForest",
+      "subtitle": "Desenvolvedor C# Junior",
+      "workSchema": "Tempo integral",
+      "desc": "Desenvolvimento back-end de APIs web em C# e ASP.NET. Estrutura de banco de dados, organizacao de dados e controle de dados MariaDB.",
+      "time": "jul de 2024 - abr de 2025"
     },
     {
-      "desc": "Descreva outro projeto ou marco de aprendizado. Mantenha o texto objetivo e focado no que voce construiu.",
-      "time": "2023 - 2024"
+      "title": "Orion Cloud",
+      "subtitle": "Estagiario de desenvolvimento de software",
+      "workSchema": "Estagio",
+      "desc": "Desenvolvimento web com PHP, JavaScript, HTML, CSS, Bootstrap e MySQL. Estrutura de banco de dados, organizacao de dados e controle de dados MySQL.",
+      "time": "jan de 2024 - jul de 2024"
     },
     {
-      "desc": "Adicione uma conquista tecnica, certificacao, bootcamp ou projeto pessoal que ajudou a formar sua stack atual.",
-      "time": "2022 - 2023"
-    },
-    {
-      "desc": "Use este espaco para seu inicio na programacao, primeiros projetos ou o momento em que comecou a construir para a web.",
-      "time": "2021 - 2022"
-    },
-    {
-      "desc": "Item opcional. Voce pode remover esta entrada ou trocar por outra experiencia em src/lib/data.ts e neste arquivo de traducao.",
-      "time": "2020 - 2021"
+      "title": "KR Distribuidora",
+      "subtitle": "Estagiario de suporte tecnico",
+      "workSchema": "Estagio",
+      "desc": "Suporte tecnico, controle de dados e apoio na organizacao de informacoes com SQL e MySQL.",
+      "time": "set de 2023 - dez de 2023"
     }
   ],
-  "projects": [
-    {
-      "description": "Interface responsiva criada para apresentar um produto digital com foco em performance, clareza visual e boa experiencia de navegacao."
-    },
-    {
-      "description": "Painel administrativo com cards, filtros e indicadores para organizar dados de negocio de maneira visual e facil de consultar."
-    },
-    {
-      "description": "Aplicacao web com fluxo de autenticacao, organizacao de registros e componentes reutilizaveis para acelerar novas telas."
-    },
-    {
-      "description": "Projeto criado para praticar consumo de API, estados no React, componentizacao e organizacao de paginas em Next.js."
+  "projects": {
+    "imageAlt": "Imagem do projeto",
+    "items": [
+      {
+        "title": "Codara Technology",
+        "description": "Empresa de desenvolvimento de software, aplicativos e sites. Demo futuramente."
+      },
+      {
+        "title": "iCasaNova",
+        "description": "Gerenciador de eventos para organizar listas, convidados e detalhes importantes. Site: iCasaNova.vercel.app."
+      },
+      {
+        "title": "Siege Manager",
+        "description": "Jogo de gerenciamento inspirado em Rainbow Six Siege. Demo futuramente."
+      },
+      {
+        "title": "ControlePlus",
+        "description": "Sistema de gestao de financas para acompanhar entradas, saidas e organizacao financeira. Demo futuramente."
+      }
+    ]
+  },
+  "resume": {
+    "label": "Curriculo",
+    "memojiAlt": "Memoji de Luis Henrique"
+  },
+  "theme": {
+    "light": "Claro",
+    "dark": "Escuro"
+  },
+  "social": {
+    "github": "Github",
+    "linkedin": "Linkedin",
+    "twitter": "Twitter / X",
+    "instagram": "Instagram",
+    "email": "Email"
+  },
+  "repositories": {
+    "title": "Repositorios",
+    "noTopics": "Sem topicos",
+    "addTopics": "Adicione topicos ao seu repositorio",
+    "metadata": {
+      "title": "Luis Henrique Winckelmann - repositorios",
+      "description": "Repositorios selecionados de Luis Henrique Winckelmann."
     }
-  ],
+  },
   "footer": {
+    "copyright": "Copyright {year} by {name}",
+    "profileName": "Luis Henrique Winckelmann",
     "versionOne": "Portfolio pessoal"
   }
 }

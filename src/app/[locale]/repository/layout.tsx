@@ -1,25 +1,36 @@
 import type { Metadata } from 'next';
 import { useLocale, NextIntlClientProvider, useMessages } from 'next-intl';
 import { notFound } from 'next/navigation';
-import { profile } from '@/lib/data';
+import { getTranslations } from 'next-intl/server';
 
-export const metadata: Metadata = {
-  title: `${profile.name} - repositorios`,
-  description: `Repositorios selecionados de ${profile.name}.`,
-  icons: {
-    icon: [
-      {
-        media: '(prefers-color-scheme: light)',
-        url: '/memoji-2.png',
-        href: '/memoji-2.png',
-      },
-      {
-        media: '(prefers-color-scheme: dark)',
-        url: '/memoji-1.png',
-        href: '/memoji-1.png',
-      },
-    ],
-  },
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { locale: string };
+}): Promise<Metadata> => {
+  const t = await getTranslations({
+    locale: params.locale,
+    namespace: 'repositories.metadata',
+  });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+    icons: {
+      icon: [
+        {
+          media: '(prefers-color-scheme: light)',
+          url: '/memoji-2.png',
+          href: '/memoji-2.png',
+        },
+        {
+          media: '(prefers-color-scheme: dark)',
+          url: '/memoji-1.png',
+          href: '/memoji-1.png',
+        },
+      ],
+    },
+  };
 };
 
 export default function RootLayout({

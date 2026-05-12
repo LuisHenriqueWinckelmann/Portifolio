@@ -6,6 +6,7 @@ import { SiTypescript, SiJavascript, SiSwift, SiGo } from 'react-icons/si';
 import { HiViewGridAdd } from 'react-icons/hi';
 import { ScrollArea, ScrollBar } from '@/components/ui/scroll-area';
 import { Skeleton } from '@/components/ui/skeleton';
+import { useTranslations } from 'next-intl';
 
 interface IRepoGithub {
   id: number;
@@ -48,6 +49,7 @@ export const HoverEffect = ({
   isFetch: boolean;
   className?: string;
 }) => {
+  const t = useTranslations('repositories');
   let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
@@ -119,7 +121,8 @@ export const HoverEffect = ({
                 <div className="flex flex-row items-center gap-x-2">
                   <div className="">
                     <div className="">
-                      {languageIcons[item.language?.toLowerCase() ?? 'default']}
+                      {languageIcons[item.language?.toLowerCase() ?? ''] ??
+                        languageIcons.default}
                     </div>
                   </div>
                   <div>
@@ -175,11 +178,11 @@ export const HoverEffect = ({
                   <div className="flex h-20 items-center justify-center rounded-md border border-slate-300 p-1">
                     <div className="flex flex-col items-center justify-center">
                       <div className="flex items-center text-base font-semibold">
-                        <span className="mr-1">No Topics</span>
+                        <span className="mr-1">{t('noTopics')}</span>
                         <HiViewGridAdd />
                       </div>
                       <div className="text-xs font-normal">
-                        Add Topics to your repository
+                        {t('addTopics')}
                       </div>
                     </div>
                   </div>

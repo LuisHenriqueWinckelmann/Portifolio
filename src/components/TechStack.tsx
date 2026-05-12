@@ -1,21 +1,19 @@
 'use client';
 
-import React, { Suspense, useEffect, useState } from 'react';
-import { Player } from '@lottiefiles/react-lottie-player';
+import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import Animation from '../../public/animations/animation-cat.json';
 import { motion } from 'framer-motion';
-import {
-  DiJsBadge,
-  DiReact,
-  DiSass,
-  DiGit,
-  DiGo,
-  DiSwift,
-  DiJava,
-} from 'react-icons/di';
+import { DiJsBadge, DiReact, DiSass, DiGit, DiJava } from 'react-icons/di';
 import { cn } from '@/lib/utils';
 import { BiLogoTypescript } from 'react-icons/bi';
 import { SiApachemaven, SiSpringboot } from 'react-icons/si';
+import { useTranslations } from 'next-intl';
+
+const LottiePlayer = dynamic(
+  () => import('@lottiefiles/react-lottie-player').then((mod) => mod.Player),
+  { ssr: false },
+);
 
 const techStackData = [
   {
@@ -84,6 +82,7 @@ const techStackData = [
 ];
 
 const TechStack = () => {
+  const t = useTranslations('common');
   const [isMounted, setIsMounted] = useState<boolean>(false);
 
   useEffect(() => {
@@ -124,11 +123,16 @@ const TechStack = () => {
           className="flex h-full items-center justify-center"
           aria-hidden="true"
         >
-          <Suspense fallback={<div>Carregando...</div>}>
-            {typeof document !== 'undefined' && isMounted && (
-              <Player autoplay loop src={Animation} className="h-full w-full" />
-            )}
-          </Suspense>
+          {isMounted ? (
+            <LottiePlayer
+              autoplay
+              loop
+              src={Animation}
+              className="h-full w-full"
+            />
+          ) : (
+            <div>{t('loading')}</div>
+          )}
         </div>
       </div>
     </div>

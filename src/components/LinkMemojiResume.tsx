@@ -5,8 +5,10 @@ import { motion, useAnimation } from 'framer-motion';
 import { IconCloudDownload } from '@tabler/icons-react';
 import Image from 'next/image';
 import { profile } from '@/lib/data';
+import { useTranslations } from 'next-intl';
 
 const LinkMemojiResume = () => {
+  const t = useTranslations('resume');
   const controls = useAnimation();
   const controlsIcon = useAnimation();
 
@@ -25,7 +27,13 @@ const LinkMemojiResume = () => {
   return (
     <div className="flex flex-row justify-between overflow-hidden">
       <motion.div animate={controls} aria-hidden="true">
-        <Image src={memoji} alt="memoji" width={150} height={150} priority />
+        <Image
+          src={memoji}
+          alt={t('memojiAlt')}
+          width={150}
+          height={150}
+          priority
+        />
       </motion.div>
       <motion.a
         target={'_blank'}
@@ -69,7 +77,7 @@ const LinkMemojiResume = () => {
         className="group relative inline-flex h-8 cursor-pointer overflow-hidden rounded-full border border-slate-200 px-[2px] py-1.5 focus:outline-none"
       >
         <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-white px-3 py-1 text-sm text-gray-900 backdrop-blur-3xl dark:bg-slate-950 dark:text-white">
-          Curriculo{' '}
+          {t('label')}{' '}
           <span className="ml-1 group-hover:hidden group-hover:transition-all">
             &rarr;
           </span>

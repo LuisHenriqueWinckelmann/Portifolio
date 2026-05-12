@@ -1,6 +1,28 @@
 {
   "common": {
-    "language": "english"
+    "language": "english",
+    "loading": "Loading..."
+  },
+  "profile": {
+    "name": "Luis Henrique Winckelmann",
+    "shortName": "Luis Winckelmann",
+    "role": "Full Stack Java Developer",
+    "headline": "Full Stack Java Developer focused on creating modern interfaces, useful systems and practical solutions for your business."
+  },
+  "metadata": {
+    "title": "Luis Henrique Winckelmann - Full Stack Java Developer",
+    "description": "Full Stack Java Developer focused on creating modern interfaces, useful systems and practical solutions for your business.",
+    "keywords": [
+      "portfolio",
+      "portfolio website",
+      "developer",
+      "frontend",
+      "fullstack",
+      "web developer",
+      "web development",
+      "react",
+      "nextjs"
+    ]
   },
   "about": {
     "intro": "I'm",
@@ -16,45 +38,82 @@
   },
   "experience": [
     {
-      "desc": "Add your most recent experience here. Mention the product, your responsibilities, the technologies used and the impact of your work.",
-      "time": "2025 - Present"
+      "title": "Duett Software",
+      "subtitle": "Junior Full-Stack Java Developer",
+      "workSchema": "Full-time",
+      "desc": "Full-stack development with Java in the company's main projects. Working with Java JDK 21, Spring Boot, React and TypeScript.",
+      "time": "Aug 2025 - present"
     },
     {
-      "desc": "Use this item to describe a previous role, freelance project, internship or study project that shows your growth as a developer.",
-      "time": "2024 - 2025"
+      "title": "Cmak AgroForest",
+      "subtitle": "Junior C# Developer",
+      "workSchema": "Full-time",
+      "desc": "Back-end development for web APIs in C# and ASP.NET. Database structure, data organization and MariaDB data control.",
+      "time": "Jul 2024 - Apr 2025"
     },
     {
-      "desc": "Describe another project or learning milestone. Keep the text objective and focused on what you built.",
-      "time": "2023 - 2024"
+      "title": "Orion Cloud",
+      "subtitle": "Software Development Intern",
+      "workSchema": "Internship",
+      "desc": "Web development with PHP, JavaScript, HTML, CSS, Bootstrap and MySQL. Database structure, data organization and MySQL data control.",
+      "time": "Jan 2024 - Jul 2024"
     },
     {
-      "desc": "Add a technical achievement, certification, bootcamp or personal project that helped shape your current stack.",
-      "time": "2022 - 2023"
-    },
-    {
-      "desc": "Use this space for your beginning in programming, first projects or the moment you started building for the web.",
-      "time": "2021 - 2022"
-    },
-    {
-      "desc": "Optional extra item. You can remove this entry or replace it with another experience in src/lib/data.ts and this translation file.",
-      "time": "2020 - 2021"
+      "title": "KR Distribuidora",
+      "subtitle": "Technical Support Intern",
+      "workSchema": "Internship",
+      "desc": "Technical support, data control and support organizing information with SQL and MySQL.",
+      "time": "Sep 2023 - Dec 2023"
     }
   ],
-  "projects": [
-    {
-      "description": "Responsive interface designed to present a digital product with performance, visual clarity and a smooth browsing experience."
-    },
-    {
-      "description": "Admin dashboard with cards, filters and indicators to organize business data in a visual and easy-to-read way."
-    },
-    {
-      "description": "Web application with authentication flow, record management and reusable components for faster page creation."
-    },
-    {
-      "description": "Study project built to practice API consumption, React state, componentization and page organization in Next.js."
+  "projects": {
+    "imageAlt": "Project image",
+    "items": [
+      {
+        "title": "Codara Technology",
+        "description": "Software, app and website development company. Demo coming later."
+      },
+      {
+        "title": "iCasaNova",
+        "description": "Event manager for organizing lists, guests and important event details. Site: iCasaNova.vercel.app."
+      },
+      {
+        "title": "Siege Manager",
+        "description": "Management game inspired by Rainbow Six Siege. Demo coming later."
+      },
+      {
+        "title": "ControlePlus",
+        "description": "Finance management system for tracking income, expenses and financial organization. Demo coming later."
+      }
+    ]
+  },
+  "resume": {
+    "label": "Resume",
+    "memojiAlt": "Luis Henrique memoji"
+  },
+  "theme": {
+    "light": "Light",
+    "dark": "Dark"
+  },
+  "social": {
+    "github": "Github",
+    "linkedin": "Linkedin",
+    "twitter": "Twitter / X",
+    "instagram": "Instagram",
+    "email": "Email"
+  },
+  "repositories": {
+    "title": "Repositories",
+    "noTopics": "No topics",
+    "addTopics": "Add topics to your repository",
+    "metadata": {
+      "title": "Luis Henrique Winckelmann - repositories",
+      "description": "Selected repositories by Luis Henrique Winckelmann."
     }
-  ],
+  },
   "footer": {
+    "copyright": "Copyright {year} by {name}",
+    "profileName": "Luis Henrique Winckelmann",
     "versionOne": "Personal portfolio"
   }
 }

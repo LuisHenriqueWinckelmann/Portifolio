@@ -4,7 +4,20 @@ const withNextIntl = require('next-intl/plugin')();
 
 const nextConfig = {
   images: {
-    domains: ['localhost', 'res.cloudinary.com', 'ucarecdn.com'],
+    remotePatterns: [
+      {
+        protocol: 'http',
+        hostname: 'localhost',
+      },
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
+      {
+        protocol: 'https',
+        hostname: 'ucarecdn.com',
+      },
+    ],
   },
 };
 

@@ -24,41 +24,42 @@ const Page = () => {
         header: <About />,
         className: 'md:col-span-2 px-7 py-8',
         active: true,
-        category: 'about',
+        category: 'home',
       },
       {
         header: <ItemTwo />,
         className: 'md:col-span-1',
         active: true,
-        category: 'about',
+        category: 'home',
       },
       {
         header: <SocialMedia />,
         className: 'md:col-span-1 px-7 py-8',
         active: true,
-        category: 'about',
+        category: 'home',
       },
       {
         header: <TechStack />,
         className: 'md:col-span-2 px-7 py-8',
         icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
         active: true,
-        category: 'about',
+        category: 'home',
       },
       {
         header: <Experience />,
-        className: 'md:col-span-2 p-3',
+        className: 'md:col-span-3 md:row-span-2 p-3',
         active: true,
         category: 'about',
       },
       ...projectsData.map((project, index) => ({
-        title: project.title,
-        description: t(`${index}.description`),
+        title: t(`items.${index}.title`),
+        description: t(`items.${index}.description`),
+        url: project.url,
         header: <SkeletonMask image={project.image} />,
         className: 'md:col-span-1 p-4',
         icon: <IconTableColumn className="h-4 w-4 text-neutral-500" />,
         active: true,
-        category: 'about' as const,
+        category: 'projects' as const,
       })),
     ],
     [t],
@@ -68,13 +69,15 @@ const Page = () => {
   const [selected, setSelected] = useState<string>('all');
 
   useEffect(() => {
+    const visibleCategory = selected === 'all' ? 'home' : selected;
+
     setItems(
       initialItems
+        .filter((item) => item.category === visibleCategory)
         .map((item) => ({
           ...item,
-          active: selected === 'all' || item.category === selected,
-        }))
-        .sort((a, b) => Number(b.active) - Number(a.active)),
+          active: true,
+        })),
     );
   }, [initialItems, selected]);
 
@@ -101,6 +104,7 @@ const Page = () => {
               index={index}
               title={item.title}
               description={item.description}
+              url={item.url}
               header={item.header}
               className={item.className}
               active={item.active}
