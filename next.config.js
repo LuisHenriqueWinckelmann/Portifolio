@@ -3,6 +3,7 @@
 const withNextIntl = require('next-intl/plugin')();
 
 const nextConfig = {
+  outputFileTracing: false,
   images: {
     remotePatterns: [
       {
